@@ -8,4 +8,12 @@ public class PoissonClown extends PoissonCarnivore {
         super(nom, sexe);
     }
 
+    public PoissonClown(String nom, Sexe sexe, int age) {
+        super(nom, sexe, age);
+    }
+
+    @Override
+    public String getRace() {
+        return "PoissonClown";
+    }
 }

@@ -8,4 +8,13 @@ public class Carpe extends PoissonHerbivore {
         super(nom, sexe);
     }
 
+    public Carpe(String nom, Sexe sexe, int age) {
+        super(nom, sexe, age);
+    }
+
+    @Override
+    public String getRace() {
+        return "Carpe";
+    }
+
 }

@@ -8,4 +8,12 @@ public class Merou extends PoissonCarnivore {
         super(nom, sexe);
     }
 
+    public Merou(String nom, Sexe sexe, int age) {
+        super(nom, sexe, age);
+    }
+
+    @Override
+    public String getRace() {
+        return "Merou";
+    }
 }

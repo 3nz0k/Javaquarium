@@ -8,4 +8,12 @@ public class Thon extends PoissonCarnivore {
         super(nom, sexe);
     }
 
+    public Thon(String nom, Sexe sexe, int age) {
+        super(nom, sexe, age);
+    }
+
+    @Override
+    public String getRace() {
+        return "Thon";
+    }
 }

@@ -8,4 +8,12 @@ public class Bar extends PoissonHerbivore {
         super(nom, sexe);
     }
 
+    public Bar(String nom, Sexe sexe, int age) {
+        super(nom, sexe, age);
+    }
+
+    @Override
+    public String getRace() {
+        return "Bar";
+    }
 }

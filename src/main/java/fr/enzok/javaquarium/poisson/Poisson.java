@@ -4,7 +4,7 @@ import fr.enzok.javaquarium.EtreVivant;
 
 abstract public class Poisson extends EtreVivant {
 
-    private String nom;
+    private final String nom;
     private Sexe sexe;
 
     public enum Sexe {
@@ -15,6 +15,15 @@ abstract public class Poisson extends EtreVivant {
     public Poisson(String nom, Sexe sexe) {
         this.nom = nom;
         this.sexe = sexe;
+        super.setAge(0);
+        super.setPV(10);
+    }
+
+    public Poisson(String nom, Sexe sexe, int age) {
+        this.nom = nom;
+        this.sexe = sexe;
+        super.setAge(age);
+        super.setPV(10);
     }
 
     public String getNom() {
@@ -24,6 +33,12 @@ abstract public class Poisson extends EtreVivant {
     public Sexe getSexe() {
         return this.sexe;
     }
+
+    public void setSexe(Sexe sexe) {
+        this.sexe = sexe;
+    }
+
+    public abstract String getRace();
 
     @Override
     public String toString() {

@@ -8,4 +8,12 @@ public class Sole extends PoissonHerbivore {
         super(nom, sexe);
     }
 
+    public Sole(String nom, Sexe sexe, int age) {
+        super(nom, sexe, age);
+    }
+
+    @Override
+    public String getRace() {
+        return "Sole";
+    }
 }
