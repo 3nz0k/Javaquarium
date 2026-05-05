@@ -44,21 +44,17 @@ public class Application {
 
         /* ~~~ [ BOUCLE DE JEU ] ~~~ */
         for (int i = 1; i < nbreTour + 1; i++) {
-            System.out.println("==== TOUR " + i + " ====");
-
-            aqua.checkAgePoisson(aqua.listePoissons);
-            System.out.println();
-
-            aqua.checkAgeAlgue(aqua.listeAlgues);
-            System.out.println();
+            System.out.println(Color.BACKGROUND_NEBULA + Color.BOLD_ON + "==== TOUR " + i + " ====" + Color.RESET);
 
             /* ~~~ [ CHECK LISTE POISSON ] ~~~ */
             if (aqua.listePoissons.isEmpty()) {
-                System.out.println(Color.RED + "Tous les poissons sont morts" + Color.RESET);
+                System.out.println(Color.ERROR + "Tous les poissons sont morts" + Color.RESET);
                 break;
             }
+
+            aqua.checkAgePoisson(aqua.listePoissons);
+            aqua.checkAgeAlgue(aqua.listeAlgues);
             aqua.chasser(aqua.listePoissons, aqua.listeAlgues);
-            System.out.println();
         }
     }
 }

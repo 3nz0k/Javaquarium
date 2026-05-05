@@ -42,24 +42,17 @@ abstract public class EtreVivant {
         this.pv -= pv;
     }
 
-    public void afficherVie() {
-        String temp = "";
-        for (int i = 0; i < this.pv; i++) {
-            temp += "█";
-        }
-        System.out.println(Color.GREEN + temp + " PV" + Color.RESET);
-    }
+    public void afficherVieAge() {
+        String tempVie = "█".repeat(this.pv);
+        String tempAge = "█".repeat(this.age);
 
-    public void afficherAge() {
-        String temp = "";
-        for (int i = 0; i < this.age; i++) {
-            temp += "█";
-        }
+        System.out.printf(Color.GREEN + tempVie + " " + this.pv + " PV" + Color.RESET + " | ");
+
         if (this.age == 1) {
-            System.out.println(Color.BLUE + temp + " an" + Color.RESET);
+            System.out.printf(Color.BLUE + tempAge + " " + this.age + " an" + Color.RESET);
         } else {
-            System.out.println(Color.BLUE + temp + " ans" + Color.RESET);
+            System.out.printf(Color.BLUE + tempAge + " " + this.age + " ans" + Color.RESET);
         }
+        System.out.println();
     }
-
 }
